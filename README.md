@@ -9,3 +9,8 @@ Simply initialize like
         selector: '.popover' // Where the content will be derived from
         // Any desired bootstrap popover options are supported also
     })
+
+## Requires
+
+* jQuery
+* Twitter Bootstrap with ToolTip javascript
