@@ -58,7 +58,7 @@
       var content
         , o = this.options
 
-      content = $(o.selector).detach();
+      content = $(o.selector).first().detach();
 
       return content
     }
