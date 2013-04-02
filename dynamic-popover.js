@@ -18,7 +18,7 @@
  * ===========================================================
  *
  * MODIFIED BY jec006 to allow for the usage of dynamic content within the popover.
- * http://github.com/jec006/dynamicPopover
+ * http://github.com/phase2/dynamicPopover
  */
 !function ($) {
   "use strict";
