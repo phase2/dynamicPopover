@@ -28,7 +28,7 @@
   * =============================== */
 
   var DynamicPopover = function (element, options) {
-    this.init('popover', element, options)
+    this.init('dynamicPopover', element, options)
     this.setContent();
   }
 
@@ -85,9 +85,9 @@
   $.fn.dynamicPopover = function (option) {
     return this.each(function () {
       var $this = $(this)
-        , data = $this.data('popover')
+        , data = $this.data('dynamicPopover')
         , options = typeof option == 'object' && option
-      if (!data) $this.data('popover', (data = new DynamicPopover(this, options)))
+      if (!data) $this.data('dynamicPopover', (data = new DynamicPopover(this, options)))
       if (typeof option == 'string') data[option]()
     })
   }
