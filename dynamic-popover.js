@@ -45,6 +45,9 @@
         , content = this.getContent();
 
       $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
+      if (this.options.closeButton) {
+        this.addCloseButton();
+      }
       $tip.find('.popover-content').append(content)
 
       $tip.removeClass('fade top bottom left right in')
@@ -73,6 +76,15 @@
   , destroy: function () {
       this.hide().$element.off('.' + this.type).removeData(this.type)
     }
+
+  , addCloseButton: function() {
+    var close = $('<a class="close" href="#" title="Close Popover">&times;</a>').appendTo($tip.find('.popover-title')),
+        ref = this;
+    close.click(function(e) {
+      ref.hide();
+      e.preventDefault();
+    });
+  }
 
   })
 

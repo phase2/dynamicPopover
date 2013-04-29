@@ -6,7 +6,8 @@ Takes the Bootstrap Popover class and adds a parameter to pass a query selector,
 Simply initialize like
 
     $('trigger').dynamicPopover({
-        selector: '.popover' // Where the content will be derived from
+        selector: '.popover', // Where the content will be derived from
+        closeButton: false, // Whether to add a modal style close button to the popover
         // Any desired bootstrap popover options are supported also
     })
 
