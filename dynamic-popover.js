@@ -78,7 +78,7 @@
     }
 
   , addCloseButton: function() {
-    var close = $('<a class="close" href="#" title="Close Popover">&times;</a>').appendTo($tip.find('.popover-title')),
+    var close = $('<a class="close" href="#" title="Close Popover">&times;</a>').appendTo(this.$tip.find('.popover-title')),
         ref = this;
     close.click(function(e) {
       ref.hide();
