@@ -44,10 +44,8 @@
         , title = this.getTitle()
         , content = this.getContent();
 
-      $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
-      if (this.options.closeButton) {
-        this.addCloseButton();
-      }
+      this.title(title);
+
       $tip.find('.popover-content').append(content)
 
       $tip.removeClass('fade top bottom left right in')
@@ -73,6 +71,15 @@
       return this.$tip
     }
 
+  , title: function(title) {
+    var $tip = this.tip();
+
+    $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title);
+    if (this.options.closeButton) {
+      this.addCloseButton();
+    }
+  }
+
   , destroy: function () {
       this.hide().$element.off('.' + this.type).removeData(this.type)
     }
@@ -83,6 +90,9 @@
     close.click(function(e) {
       ref.hide();
       e.preventDefault();
+      if (typeof ref.options.onClose == 'function') {
+        ref.options.onClose();
+      }
     });
   }
 

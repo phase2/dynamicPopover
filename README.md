@@ -8,6 +8,7 @@ Simply initialize like
     $('trigger').dynamicPopover({
         selector: '.popover', // Where the content will be derived from
         closeButton: false, // Whether to add a modal style close button to the popover
+        onClose: function(){}, // A callback for when the close button is clicked
         // Any desired bootstrap popover options are supported also
     })
 
